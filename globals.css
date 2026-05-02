@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    background-clip: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    scroll-padding: 10rem;
+    margin: 0px;
+    min-height: 100%;
+    margin: 0;
+    font-family: var(--text-font-family);
+    color: var(--text-colour);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    background-color: var(--background-colour);
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 0;
+}
+
+.nav-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vw 0;
+}
+
+.home-button {
+    font-size: 1.5vw;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2vw;
+    list-style-type: none;
+}
+
+.nav-links a {
+    background-color: var(--soft-grey);
+    font-weight: 400;
+    font-size: 1.2vw;
+    transition: color 0.3s ease;
+    border-radius: 50px;
+    padding: 0.5vw 2.5vw;
+}
+
+.nav-links a:hover {
+    background-color: var(--soft-accent-colour);
+    color: var(--background-colour);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    position: relative;
+    background-color: var(--background-colour);
+    display: flex;
+    padding: 20vh 0 5vh 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    align-self: stretch;
+}
+
+.footer-heading {
+    font-size: 3vw;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.all-links {
+    display: inline-grid;
+    column-gap: 10vw;
+    grid-template-rows: repeat(1, fit-content(100%));
+    grid-template-columns: repeat(2, fit-content(100%));
+}
+
+.contact {
+    display: flex;
+    width: 25vw;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.links {
+    display: flex;
+    width: 5vw;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.link-heading {
+    font-size: 1.5vw;
+    font-weight: 400;
+    padding-bottom: 2vh;
+}
+
+.link-text {
+    font-size: 1.2vw;
+    font-weight: 200;
+    padding: 1vh 0 1vh 0;
+}
+
+.link-text:hover {
+    color: var(--text-colour);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.dividing-line {
+    border-left: 2px solid var(--soft-grey);
+    border-radius: 50px;
+    height: 3vh;
+}
+
+.copyright {
+    display: flex;
+    height: 7vh;
+    align-items: center;
+    gap: 2vw;
+    color: var(--soft-grey);
+}
+
+h1 {
+    font-family: var(--text-font-family);
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 50px;
+    background: var(--accent-colour);
+    background: -webkit-linear-gradient(to right, var(--accent-colour-2), var(--accent-colour));
+    background: linear-gradient(to right, var(--accent-colour-2), var(--accent-colour));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+    h2 {
+        font-size: 40px;
+    }
+
+    .paragraph-large {
+        font-size: 18px;
+    }
+
+    .padding-vertical-xlarge {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .timeline_item {
+        grid-template-columns: 64px 1fr;
+        width: 100%;
+    }
+
+    .timeline_left {
+        text-align: left;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .timeline_centre {
+        justify-content: flex-start;
+        grid-area: 1 / 1 / 3 / 2;
+    }
+
+    .timeline_right {
+        grid-area: span 1 / span 1 / span 1 / span 1;
+    }
+
+    .timeline_date-text {
+        margin-bottom: 24px;
+        font-size: 36px;
+    }
+
+    .timeline_text {
+        font-size: 20px;
+    }
+
+    .timeline_progress {
+        left: 6px;
+    }
+
+    .margin-bottom-xlarge {
+        margin-bottom: 48px;
+    }
+}
