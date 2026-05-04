@@ -1,0 +1,247 @@
+* {
+    --me-size: 60vh;
+    --projects-color: rgba(65, 105, 225, 0.1);
+    --tag-editorial: "Editorial Design";
+    --tag-branding: "Branding";
+    --tag-ux: "UX/UI Design";
+    --tag-web: "Web Design";
+    --tag-sm: "Social Media Graphics";
+    --tag-motion: "Motion Graphics";
+    --tag-editing: "Video Editing";
+    --tag-shortfilm: "Shortfilm";
+
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
+
+/* hero section */
+.section-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--background-colour);
+    padding: calc(0.75rem + 12vh) 0 calc(0.75rem + 2vh);
+}
+
+.Levin-Hlawatczek {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    line-height: 4.5vw;
+}
+
+.me {
+    position: relative;
+    object-fit: cover;
+    height: auto;
+    width: var(--me-size);
+    z-index: 1;
+}
+
+.path-mask-me {
+    display: block;
+    -webkit-clip-path: url(#mask-me);
+    clip-path: url(#mask-me);
+    height: auto;
+    width: var(--me-size);
+    inset: auto 0 0 auto;
+}
+
+.circle-blue {
+    display: inline-block;
+    border-radius: 50%;
+    width: var(--me-size);
+    height: var(--me-size);
+    background-color: var(--accent-colour);
+    position: absolute;
+    inset: auto 0 0 auto;
+    z-index: -1;
+}
+
+/* work / portfolio section */
+.work-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10vh 0;
+}
+
+.projects-wrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4vw;
+    padding: 10vh 0;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.2vh;
+    border-radius: 10px;
+    background-color: var(--projects-color);
+    padding: 2vh 2vh;
+    transition: background-color 0.8s ease;
+}
+
+.project:hover {
+    background-color: var(--accent-colour-2);
+
+}
+
+.project figure {
+    width: 100%;
+    height: 20vw;
+    border-radius: 8px 8px 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.hover-img {
+    width: 100%;
+    height: 100%;
+}
+
+.project:hover .hover-img {
+    opacity: 0;
+}
+
+.project h3 {
+    font-size: 1.5vw;
+    font-weight: 600;
+    padding: 2vh 0 0vh 0;
+    color: var(--accent-colour);
+    transition: color 0.8s ease;
+}
+
+.project:hover h3 {
+    color: var(--accent-colour-hard);
+}
+
+.project p {
+    font-size: .8vw;
+    font-weight: 500;
+    color: var(--grey);
+    transition: color 0.8s ease;
+}
+
+.project:hover p {
+    color: var(--text-colour-soft);
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5vw;
+    list-style-type: none;
+    padding-top: 1vh;
+}
+
+.tags li {
+    display: inline-block;
+    background-color: var(--accent-colour-2);
+    color: var(--background-colour);
+    padding: 0.5vh 1vw;
+    border-radius: 20px;
+    font-size: .8vw;
+    transition: background-color 0.8s ease;
+}
+
+.project:hover .tags li {
+    background-color: var(--accent-colour);
+}
+
+
+/* TAGS for work section*/
+.tag-editorial::before {
+    content: var(--tag-editorial);
+}
+
+.tag-branding::before {
+    content: var(--tag-branding);
+}
+
+.tag-ux::before {
+    content: var(--tag-ux);
+}
+
+.tag-web::before {
+    content: var(--tag-web);
+}
+
+.tag-sm::before {
+    content: var(--tag-sm);
+}
+
+.tag-motion::before {
+    content: var(--tag-motion);
+}
+
+.tag-editing::before {
+    content: var(--tag-editing);
+}
+
+.tag-shortfilm::before {
+    content: var(--tag-shortfilm);
+}
+
+
+
+/* responsive breakpoints */
+@media (max-width: 600px) {
+    * {
+        --me-size: 40vh;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    .section-hero {
+        padding: calc(0.75rem + 4vh) 0 calc(0.75rem + 12vh);
+    }
+
+    .Levin-Hlawatczek {
+        top: 100%;
+        left: 0%;
+        line-height: 8vw;
+    }
+
+    .projects-wrapper {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .project figure {
+        height: 60vw;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .projects-wrapper {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project figure {
+        height: 40vw;
+    }
+
+}
+
+@media (min-width: 1025px) {}

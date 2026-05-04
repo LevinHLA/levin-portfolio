@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     background-clip: border-box;
+    color: var(--text-colour);
 }
 
 html,
@@ -143,6 +144,60 @@ footer {
     align-items: center;
     gap: 2vw;
     color: var(--copyright-color);
+}
+
+.contact-box {
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--accent-colour);
+    color: var(--background-colour);
+    padding: 2vh 4vh;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    font-size: 1.2vw;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: contain 0vh 50vh;
+    opacity: 1;
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+    }
+}
+
+.contact-box a {
+    color: var(--background-colour);
+}
+
+.contact-box hr {
+    border: none;
+    width: 80%;
+    border-radius: 50px;
+    border-top: 0.4vh solid var(--background-colour);
+    margin: 10px 0;
+}
+
+.contact-box svg {
+    width: 4vw;
+    height: 4vw;
+    fill: var(--background-colour);
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
 }
 
 h1 {
