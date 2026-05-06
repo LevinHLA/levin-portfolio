@@ -184,7 +184,7 @@ img {
 .scroll-wrapper {
     width: 80%;
     overflow-x: auto;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
 }
 
 .program-scroller {
@@ -297,9 +297,16 @@ img {
     padding-bottom: 15vh;
 }
 
+.timeline-icon {
+    width: 20vw;
+    height: auto;
+    justify-self: center;
+    padding: 15vh 0 5vh 0;
+}
+
 .timeline-main_heading-wrapper {
     text-align: center;
-    max-width: 640px;
+    max-width: 40vw;
     margin-left: auto;
     margin-right: auto;
 }
