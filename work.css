@@ -204,6 +204,15 @@ img {
 }
 
 
+.single-project-wrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4vw;
+    padding: 10vh 0;
+}
+
+
 
 /* responsive breakpoints */
 @media (max-width: 600px) {
